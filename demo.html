@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>action</title>
+	<link rel="stylesheet" href="css/action.css">
+	<script src="src/action.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+	<div onclick="add()">打开操作表</div>
+<script>
+	function add (){
+		actionSheet.show({
+			buttons:[
+				{text:'拍照'},
+				{text:'小视频'},
+				{text:'录音'},
+				{text:'相册'}
+			],
+			cancelText:'取消',
+			cancel:function(){
+				console.log('cancel');
+			},
+			buttonClick:function(index){
+				console.log(index);
+			}
+		});
+	}
+</script>
+</body>
+</html>

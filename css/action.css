@@ -1,0 +1,102 @@
+.action-sheet-backdrop {
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.action-sheet-backdrop.active {
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.action-sheet-wrapper {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  -webkit-transition: all cubic-bezier(0.36, 0.66, 0.04, 1) 500ms;
+  transition: all cubic-bezier(0.36, 0.66, 0.04, 1) 500ms;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  z-index: 999;
+}
+
+.action-sheet-up {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); 
+}
+
+.action-sheet {
+  margin-left: 8px;
+  margin-right: 8px;
+  width: auto;
+  z-index: 1001;
+  overflow: hidden; 
+}
+
+.action-sheet .button {
+    display: block;
+    padding: 10px 1px;
+    width: 100%;
+    border-radius: 0;
+    border-color: #d1d3d6;
+    background-color: transparent;
+    color: #007aff;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: "微软雅黑", "Microsoft YaHei";
+}
+
+.action-sheet .button:hover {
+  color: #007aff; 
+}
+
+.action-sheet .button.destructive {
+  color: #ff3b30; 
+}
+
+.action-sheet .button.destructive:hover {
+  color: #ff3b30; 
+}
+
+.action-sheet .button.active, .action-sheet .button.activated {
+  box-shadow: none;
+  border-color: #d1d3d6;
+  color: #007aff;
+  background: #e4e5e7; 
+}
+
+.action-sheet-group {
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden; 
+}
+
+.action-sheet-group .button {
+  border-width: 1px 0 0 0;
+}
+
+.action-sheet-open{
+  /*pointer-events:none;*/
+}
+
+.action-sheet-group .button:first-child:last-child {
+  border-width: 0; 
+}
+.action-sheet-close{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  width: 100%;
+  height: 100%;
+}
