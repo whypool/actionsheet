@@ -58,7 +58,6 @@
 				if(actionDom.parentNode){
 					actionDom.parentNode.removeChild(actionDom);
 				}
-				removeClass(document.body,'action-sheet-open');
 				window.clearTimeout(TIMEOUT);
 			},300);
 		}
